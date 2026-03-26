@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-note">Hey there,<br>Welcome to the sahil's Password Strength Checker!</div>
+
+<div class="container">
+    <h2>🔐 Password Strength Checker</h2>
+    
+    <button class="suggest-btn" onclick="suggestPassword()">💡 Suggest Strong Password</button>
+
+    <input type="password" id="password" placeholder="Enter password" oninput="checkPassword()">
+    
+    <div id="strength-bar"></div>
+    
+    <p id="result"></p>
+
+    <ul id="criteria">
+        <li id="c-length" class="invalid">● 8+ characters</li>
+        <li id="c-upper" class="invalid">● Uppercase letter</li>
+        <li id="c-lower" class="invalid">● Lowercase letter</li>
+        <li id="c-number" class="invalid">● Number</li>
+        <li id="c-special" class="invalid">● Special character (@#$%^&*!)</li>
+    </ul>
+
+    <button onclick="checkPassword()">Check Strength</button>
+</div>
+
+<script src="functions.js"></script>
+
+</body>
+</html>
